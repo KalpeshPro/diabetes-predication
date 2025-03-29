@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Risk Assessment</title>
+    <link rel="stylesheet" href="model.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Diabetes Risk Assessment</h1>
+        <form id="predictionForm">
+            <div class="input-group">
+                <label for="glucose"><i class="fas fa-vial"></i> Glucose Level (mg/dL)</label>
+                <input type="number" id="glucose" placeholder="Enter glucose level" required>
+            </div>
+
+            <div class="input-group">
+                <label for="bmi"><i class="fas fa-weight"></i> Body Mass</label>
+                <input type="number" step="0.1" id="bmi" placeholder="Enter BMI value" required>
+            </div>
+
+            <div class="input-group">
+                <label for="insulin"><i class="fas fa-syringe"></i> Insulin Level (μU/mL)</label>
+                <input type="number" id="insulin" placeholder="Enter insulin level" required>
+            </div>
+
+            <div class="input-group">
+                <label for="age"><i class="fas fa-user"></i> Age</label>
+                <input type="number" id="age" placeholder="Enter your age" min="0" max="99" required>
+            </div>
+
+            <div class="loading" id="loading">
+                <i class="fas fa-spinner fa-spin"></i> Analyzing...
+            </div>
+
+            <button type="submit"><i class="fas fa-stethoscope"></i> Check Risk</button>
+        </form>
+
+        <div class="output-box">
+            <h2>Prediction Result</h2>
+            <p id="output-text">Your result will appear here.</p>
+        </div>
+    </div>
+
+    <script src="model.js"></script>
+</body>
+</html>
+
+
+
